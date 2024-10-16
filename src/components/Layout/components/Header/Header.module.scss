@@ -5,11 +5,16 @@
   --search-icon-color: rgba(22, 24, 35, 0.34);
   --search-button-width: 52px;
 
-  width: 100%;
-  height: var(--default-layout-header-height, 60px);
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: var(--default-layout-header-height);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px;
+  background-color: var(--white);
 }
 
 .inner {
@@ -19,6 +24,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.logo-link {
+  display: flex;
 }
 
 //Actions
@@ -40,6 +49,21 @@
   font-size: 2.4rem;
   background-color: transparent;
   padding: 4px 12px;
+}
+
+.badge {
+  position: absolute;
+  top: -3px;
+  right: 0px;
+  padding: 0px 6px;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  font-family: var(--font-family);
+  background-color: var(--primary);
 }
 
 .user-avatar {
